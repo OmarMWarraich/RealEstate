@@ -23,6 +23,11 @@
   },
   "homepage": "https://github.com/OmarMWarraich/RealEstate#readme",
   "dependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "openzeppelin-solidity": "^4.5.0",
+    "solc": "^0.8.9",
+    "solc-js": "^1.0.1",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.7.0"
   }
 }

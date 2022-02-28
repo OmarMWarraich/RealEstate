@@ -1,16 +1,20 @@
 var ERC721MintableComplete = artifacts.require('ERC721MintableComplete');
 
+let account_one;
+let account_two;
+
 contract('TestERC721Mintable', accounts => {
 
     const account_one = accounts[0];
     const account_two = accounts[1];
+});
 
-    describe('match erc721 spec', function () {
-        beforeEach(async function () { 
-            this.contract = await ERC721MintableComplete.new({from: account_one});
+describe('match erc721 spec', function () {
+    beforeEach(async function () { 
+        this.contract = await ERC721MintableComplete.new({from: account_one});
 
-            // TODO: mint multiple tokens
-        })
+        // TODO: mint multiple tokens
+    })
 
         it('should return total supply', async function () { 
 
@@ -30,18 +34,18 @@ contract('TestERC721Mintable', accounts => {
         })
     });
 
-    describe('have ownership properties', function () {
-        beforeEach(async function () { 
-            this.contract = await ERC721MintableComplete.new({from: account_one});
-        })
+describe('have ownership properties', function () {
+    beforeEach(async function () {
+        this.contract = await ERC721MintableComplete.new({ from: account_one });
+    })
 
-        it('should fail when minting when address is not contract owner', async function () { 
+    it('should fail when minting when address is not contract owner', async function () {
 
-        })
+    })
 
-        it('should return contract owner', async function () { 
+    it('should return contract owner', async function () {
 
-        })
+    })
 
-    });
-}) 
+
+});
